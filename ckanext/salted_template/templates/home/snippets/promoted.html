@@ -1,0 +1,26 @@
+{% set intro_text, intro_title = g.site_intro_text, h.salted_template_introduction_title %}
+
+<div class="module-promotion-title">
+  <div>
+    {% if intro_title %}
+      {{ h.render_markdown(intro_title) }}
+    {% else %}
+      <h1 class="page-heading">{{ _("Welcome to CKAN") }}</h1>
+    {% endif %}
+  </div>
+</div>
+
+<div class="module-promotion card box">
+  <div>
+    {% if intro_text %}
+      {{ h.render_markdown(intro_text) }}
+    {% else %}
+      <h1 class="page-heading">{{ _("Welcome to CKAN") }}</h1>
+      <p>
+        {% trans %}This is a nice introductory paragraph about CKAN or the site
+        in general. We don't have any copy to go here yet but soon we will
+        {% endtrans %}
+      </p>
+    {% endif %}
+  </div>
+</div>

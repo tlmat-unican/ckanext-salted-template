@@ -1,0 +1,14 @@
+# salted_template-js:
+#   filter: rjsmin
+#   output: ckanext-salted_template/%(version)s-salted_template.js
+#   contents:
+#     - js/salted_template.js
+#   extra:
+#     preload:
+#       - base/main
+
+# salted_template-css:
+#   filter: cssrewrite
+#   output: ckanext-salted_template/%(version)s-salted_template.css
+#   contents:
+#     - css/salted_template.css

@@ -1,0 +1,6 @@
+{% ckan_extends %}
+{% set custom_css_filename = h.salted_template_custom_css_filename %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{{ h.url_for_static_or_external(custom_css_filename)}}" />
+{% endblock %}
